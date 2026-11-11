@@ -1,0 +1,69 @@
+name: mind_tiles_game
+description: "Mind Tiles — a symbol memory-matching puzzle game built with Flutter and Flame."
+publish_to: 'none'
+
+# Keep in sync with lib/app/app_config.dart (enforced by test/app_config_test.dart).
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.38.2
+  audioplayers: ^6.8.1
+  shared_preferences: ^2.5.6
+  firebase_core: ^4.15.2
+  firebase_analytics: ^12.6.1
+  firebase_crashlytics: ^5.4.1
+  firebase_performance: ^0.11.7
+  firebase_messaging: ^16.7.1
+  flutter_local_notifications: ^23.0.1
+  google_mobile_ads: ^9.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+  fonts:
+    - family: LilitaOne
+      fonts:
+        - asset: assets/fonts/LilitaOne-Regular.ttf
+    # Bundled so Flutter web never downloads Roboto from Google Fonts
+    # (YouTube Playables blocks external calls). OFL 1.1.
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-Black.ttf
+          weight: 900
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/images/app_icon.png
+  remove_alpha_ios: true
+  adaptive_icon_background: "#34196F"
+  adaptive_icon_foreground: assets/images/app_icon_foreground.png
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#34196F"
+  image: assets/images/splash_logo.png
+  android_12:
+    color: "#34196F"
+    image: assets/images/splash_logo_android12.png
+  fullscreen: false

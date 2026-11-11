@@ -1,0 +1,58 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "mind-tiles-9t1li",
+          "appId": "1:934113745278:android:3c0e67161a57e1f788bb2f",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "mind-tiles-9t1li",
+          "appId": "1:934113745278:ios:377d664e508e3dbc88bb2f",
+          "uploadDebugSymbols": true,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "mind-tiles-9t1li",
+          "configurations": {
+            "android": "1:934113745278:android:3c0e67161a57e1f788bb2f",
+            "ios": "1:934113745278:ios:377d664e508e3dbc88bb2f"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "website",
+    "ignore": [
+      "README.md",
+      "**/.*"
+    ],
+    "cleanUrls": false,
+    "headers": [
+      {
+        "source": "**/*.@(webp|png|ttf|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "app-ads.txt",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          }
+        ]
+      }
+    ]
+  }
+}

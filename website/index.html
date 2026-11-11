@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mind Tiles — Flip, Remember, Match</title>
+  <meta name="description" content="Mind Tiles is a free symbol memory-matching puzzle game for Android and iOS. Flip yellow tiles, remember the symbols and match every pair across 30 levels, timed challenges and a Daily Challenge.">
+  <meta name="theme-color" content="#34196F">
+  <link rel="canonical" href="https://[WEBSITE_DOMAIN]/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mind Tiles — Flip, Remember, Match">
+  <meta property="og:description" content="A colourful memory-matching puzzle game with 30 levels, timed challenges and a Daily Challenge.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Mind Tiles",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "GameApplication",
+    "genre": "Puzzle",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "A symbol memory-matching puzzle game: flip tiles, remember symbols and match every pair."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Game symbols, same shapes as the in-game vector tiles -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="s-star" viewBox="0 0 100 100"><path d="M50 7 61 39 95 39 67 59 78 92 50 72 22 92 33 59 5 39 39 39Z"/></symbol>
+      <symbol id="s-heart" viewBox="0 0 100 100"><path d="M50 86C50 86 7 60 7 35 7 20 18 12 30 12 40 12 47 18 50 27 53 18 60 12 70 12 82 12 93 20 93 35 93 60 50 86 50 86Z"/></symbol>
+      <symbol id="s-hex" viewBox="0 0 100 100"><path d="M86 29 86 71 50 92 14 71 14 29 50 8Z"/></symbol>
+      <symbol id="s-ring" viewBox="0 0 100 100"><path d="M50 12a38 38 0 1 0 0.01 0Zm0 11a27 27 0 1 1-0.01 0Z" fill-rule="evenodd"/></symbol>
+      <symbol id="s-x" viewBox="0 0 100 100"><path d="M22 14 50 42 78 14 86 22 58 50 86 78 78 86 50 58 22 86 14 78 42 50 14 22Z"/></symbol>
+      <symbol id="s-bolt" viewBox="0 0 100 100"><path d="M60 5 20 55 46 55 36 95 80 40 54 40 68 5Z"/></symbol>
+      <symbol id="s-sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="20"/><path d="M47 4h6v16h-6zM47 80h6v16h-6zM4 47h16v6H4zM80 47h16v6H80zM16 20l4-4 12 12-4 4zM68 72l4-4 12 12-4 4zM16 80l12-12 4 4-12 12zM68 28l12-12 4 4-12 12z"/></symbol>
+      <symbol id="s-hourglass" viewBox="0 0 100 100"><path d="M20 10h60L50 50 80 90H20L50 50Z"/></symbol>
+      <symbol id="s-dice" viewBox="0 0 100 100"><circle cx="25" cy="25" r="10"/><circle cx="75" cy="25" r="10"/><circle cx="50" cy="50" r="10"/><circle cx="25" cy="75" r="10"/><circle cx="75" cy="75" r="10"/></symbol>
+      <symbol id="s-flower" viewBox="0 0 100 100"><path d="M50 11a18 18 0 0 1 18 18 18 18 0 0 1 3 21 18 18 0 0 1-21 21 18 18 0 0 1-21-21 18 18 0 0 1 3-21A18 18 0 0 1 50 11Zm0 31a8 8 0 1 0 0.01 0Z" fill-rule="evenodd"/></symbol>
+      <symbol id="s-trophy" viewBox="0 0 100 100"><path d="M28 10h44v10h16v12c0 14-10 22-22 24-3 8-8 12-12 14v12h16v10H30V80h16V70c-4-2-9-6-12-14C22 54 12 46 12 32V20h16Zm-6 20v2c0 7 4 12 8 14-1-5-2-10-2-16Zm56 0h-6c0 6-1 11-2 16 4-2 8-7 8-14Z"/></symbol>
+      <symbol id="s-shield" viewBox="0 0 100 100"><path d="M50 6 86 20v26c0 24-16 40-36 48C30 86 14 70 14 46V20Z"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Mind Tiles home">
+        <img src="assets/img/icon-512.png" alt="" width="36" height="36">
+        <span>Mind Tiles</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#modes">Modes</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <div class="tiles" aria-hidden="true">
+            <div class="tile"><svg><use href="#s-star"/></svg></div>
+            <div class="tile"><svg><use href="#s-heart"/></svg></div>
+            <div class="tile"><svg><use href="#s-hex"/></svg></div>
+            <div class="tile"><svg><use href="#s-ring"/></svg></div>
+            <div class="tile"><svg><use href="#s-x"/></svg></div>
+          </div>
+          <h1 id="hero-title">MIND TILES</h1>
+          <p class="lead">Flip the tiles, remember the symbols and match every pair. A bright, relaxing memory puzzle with 30 levels, timed challenges and a new Daily Challenge every day.</p>
+          <div class="cta">
+            <a class="btn" href="#features">See the game</a>
+            <a class="btn secondary" href="#how">How to play</a>
+          </div>
+          <div class="stores" aria-label="Availability">
+            <span class="badge">▶<span>Google Play<small>Coming soon</small></span></span>
+            <span class="badge"><span>App Store<small>Coming soon</small></span></span>
+          </div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/img/screen-home.webp" width="540" height="1212" alt="Mind Tiles home screen with Play, Levels, Modes and Daily Challenge buttons"></div>
+          <div class="phone"><img src="assets/img/screen-board.webp" width="540" height="1212" alt="A 4 by 4 board of yellow tiles showing stars, hearts, suns and dice symbols during the memorize preview"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-title">
+          <h2 id="features-title">Why players love it</h2>
+          <p>Inspired by a classic wooden board of yellow symbol tiles, rebuilt as a polished mobile game.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="icon bg-yellow"><svg><use href="#s-star"/></svg></div>
+            <h3>40 crisp symbols</h3>
+            <p>Stars, hearts, hexagons, dice and more, drawn as sharp vector shapes that look perfect on every screen.</p>
+          </article>
+          <article class="card">
+            <div class="icon bg-sky"><svg><use href="#s-hex"/></svg></div>
+            <h3>30 handcrafted levels</h3>
+            <p>Start on a 4×4 board and work up to an 8×10 expert grid with shorter previews and trickier look-alike symbols.</p>
+          </article>
+          <article class="card">
+            <div class="icon bg-coral"><svg><use href="#s-sun"/></svg></div>
+            <h3>Daily Challenge</h3>
+            <p>One new board every day, the same for everyone. Clear it to build your streak.</p>
+          </article>
+          <article class="card">
+            <div class="icon bg-orange"><svg><use href="#s-trophy"/></svg></div>
+            <h3>Stars & achievements</h3>
+            <p>Earn up to three stars per level, beat your best score and unlock 13 achievements.</p>
+          </article>
+          <article class="card">
+            <div class="icon bg-teal"><svg><use href="#s-flower"/></svg></div>
+            <h3>Play your way</h3>
+            <p>Three tile themes, including a high-contrast option, adjustable preview time, reduced motion, and sound, music and haptics controls.</p>
+          </article>
+          <article class="card">
+            <div class="icon bg-violet"><svg><use href="#s-shield"/></svg></div>
+            <h3>No account needed</h3>
+            <p>Just open and play, even offline. Your progress is saved on your device.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-title">
+          <h2 id="how-title">How to play</h2>
+          <p>Easy to learn, hard to master.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Memorize</h3><p>Every board starts with a short peek at all tiles. Remember where the symbols are.</p></div>
+          <div class="step"><h3>Flip two tiles</h3><p>Tap one tile, then another. Each pair of flips counts as one move.</p></div>
+          <div class="step"><h3>Make matches</h3><p>A match stays face up with a ✓. A miss shows ✗ and flips back, so remember it for later.</p></div>
+          <div class="step"><h3>Earn stars</h3><p>Clear the board in fewer moves for more stars and a higher score.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modes" aria-labelledby="modes-title">
+      <div class="wrap">
+        <div class="section-title">
+          <h2 id="modes-title">Five ways to play</h2>
+        </div>
+        <div class="table-scroll">
+          <table class="modes">
+            <thead><tr><th scope="col">Mode</th><th scope="col">What it is</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Classic</strong></td><td>30 levels from Easy 4×4 to Expert 8×10, with no time limit.</td></tr>
+              <tr><td><strong>Timed Challenge</strong></td><td>Clear the board before the countdown hits zero.</td></tr>
+              <tr><td><strong>Limited Moves</strong></td><td>A fixed number of attempts, so every flip counts.</td></tr>
+              <tr><td><strong>Daily Challenge</strong></td><td>One shared board per day. Keep your streak alive.</td></tr>
+              <tr><td><strong>Practice</strong></td><td>Any board size, no clock, unlimited hints. Not recorded.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap" style="max-width:820px">
+        <div class="section-title"><h2 id="faq-title">FAQ</h2></div>
+        <details class="faq"><summary>Is Mind Tiles free?</summary><p>Yes. The game is free to play and supported by ads. You can optionally watch a short ad to get an extra hint.</p></details>
+        <details class="faq"><summary>Do I need an internet connection?</summary><p>No. All game modes work offline. An internet connection is only used for ads, anonymous analytics and optional notifications.</p></details>
+        <details class="faq"><summary>Do I need to create an account?</summary><p>No account or sign-in is needed. Your progress is stored on your device.</p></details>
+        <details class="faq"><summary>Will I lose progress if I close the game mid-level?</summary><p>No. Your board is saved automatically. Tap <em>Continue</em> on the home screen to pick up where you left off.</p></details>
+        <details class="faq"><summary>How do I turn off notifications or analytics?</summary><p>Open <em>Settings</em> in the game. <em>Daily reminders</em> controls notifications and <em>Share usage &amp; crash reports</em> controls analytics. Details are in our <a href="privacy.html">Privacy Policy</a>.</p></details>
+        <details class="faq"><summary>How do I reset my progress?</summary><p>Settings → <em>Reset all progress</em>. This permanently erases levels, scores, statistics and achievements on your device.</p></details>
+        <details class="faq"><summary>How can I contact you?</summary><p>Email us at <a href="mailto:[CONTACT_EMAIL]">[CONTACT_EMAIL]</a>. We read every message.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>© <span id="year">2026</span> [DEVELOPER_NAME]. All rights reserved.</div>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:[CONTACT_EMAIL]">Contact</a>
+        <a href="assets/fonts/OFL-LilitaOne.txt">Font license</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

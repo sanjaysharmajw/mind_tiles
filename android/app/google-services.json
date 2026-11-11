@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934113745278",
+    "project_id": "mind-tiles-9t1li",
+    "storage_bucket": "mind-tiles-9t1li.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934113745278:android:3c0e67161a57e1f788bb2f",
+        "android_client_info": {
+          "package_name": "com.codestack_mindtiles.game.mind_tiles_game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVcmM5b02xwqG7r2_kPHIy30FgyL3kwLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

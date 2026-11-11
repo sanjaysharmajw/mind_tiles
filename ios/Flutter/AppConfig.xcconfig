@@ -1,0 +1,7 @@
+// App identity for iOS builds. Change APP_BUNDLE_ID to your own reverse-DNS
+// identifier (must match the App ID registered in your Apple Developer account).
+APP_BUNDLE_ID = com.codestackmindtiles.game.mindTilesGame
+
+// AdMob App ID. Google's public TEST app ID — replace with your real AdMob
+// App ID (AdMob console → Apps) before release.
+ADMOB_APP_ID = ca-app-pub-3940256099942544~1458002511

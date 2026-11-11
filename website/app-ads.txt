@@ -1,0 +1,8 @@
+# app-ads.txt for Mind Tiles — must be served at https://[WEBSITE_DOMAIN]/app-ads.txt
+# and that domain must be the "Developer website" in your Play Console / App Store listing.
+#
+# Replace pub-0000000000000000 with YOUR AdMob publisher ID
+# (AdMob console → Settings → Account information → Publisher ID), then
+# remove the leading "# " from the line below.
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
